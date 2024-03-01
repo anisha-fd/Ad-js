@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>Function in JS</h1>
+    <p>
+      Functions are the main “building blocks” of the program. They allow the
+      code to be called many times without repetition.
+    </p>
+    <p>Functions are the heart of JavaScript.</p>
+    <p>Functions are treated as First-Class Citizens in JavaScript.</p>
+
+    <script>
+
+       // Function declaration
+
+      //  function greet() {
+      //         console.log("Heloo Dosto");
+      //  }
+      //  greet()
+      //  greet()
+       
+       //Local Variable
+
+       // A variable declared inside a function is only visible inside that function.
+      // function scoped or local scoped
+
+      // function local() {
+      //   let a = 20;
+      //   console.log(a);
+        
+      // }
+      // local()
+      // local()
+      // local()
+
+
+
+      //Outer Variables
+
+
+      //A function can access an outer variable as well,
+
+      // let b = 50;
+      // function local() {
+      //   console.log(b);
+        
+        
+      // }
+      // local()
+      // console.log(b);
+
+     // Parameters
+
+     //while declaring a function we pass some parameters in the parenthesis (para1, para2)
+
+     function twonumber(a , b) {
+         console.log(a * b);
+        
+     }
+     twonumber(4,2)
+     twonumber(5,2)
+     twonumber(10,20)
+      
+    //Default value
+
+    // function kuchvalue(a, b=10,c=20) {
+      
+    //   console.log(b);
+
+    //   console.log(a+b-c);
+    //   console.log(c);
+      
+
+
+    
+      
+    // }
+    // kuchvalue(4,5)
+    
+    //Return
+
+    // function  greet() {
+    //   console.log('before');
+    //   return console.log('GOOD MORNING');
+    //   console.log('very good morning');
+      
+    // }
+    // greet()
+
+    //Anonymous Function 
+
+    // const Anii = function () {
+    //          console.log('Hello Anonymous');
+    //      }
+    //      Anii()
+
+    </script>
+
+</body>
+</html>
