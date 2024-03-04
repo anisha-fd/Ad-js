@@ -11,14 +11,27 @@
 
     <script>
 
-        function outer() {
-            for (let i = 0; i <=5; i++) {
-                setTimeout(()=> {
-                    console.log(i);
+        // function outer() {
+        //     for (let i = 0; i <=5; i++) {
+        //         setTimeout(()=> {
+        //             console.log(i);
 
-                },i*3000);
+        //         },i*3000);
                 
                 
+        //     }
+            
+        // }
+        // outer()
+
+
+        function outer() {
+            for (let i = 0; i <=7; i++) {
+                  setTimeout(() =>{
+                   console.log(i);
+
+                },i*2000)
+               
             }
             
         }

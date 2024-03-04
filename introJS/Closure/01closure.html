@@ -7,31 +7,123 @@
 </head>
 <body>
     <h1>Closure in javascript</h1>
+
+      <h2>
+        A function bundled together with its lexical environment makes a Closure.
+      </h2> 
+      <h3>Functions Are the heart of Javascript</h3>
+
+      <p>
+        Closure in JavaScript is a form of lexical scoping used to preserve
+        variables from the outer scope of a function in the inner scope of a
+        function. Lexical scoping is the process used to define the scope of a
+        variable by its position in the source code.
+      </p>
+
+      <p>
+        A closure is the combination of a function bundled together (enclosed)
+        with references to its surrounding state (the lexical environment). In
+        other words, a closure gives you access to an outer function's scope from
+        an inner function. In JavaScript, closures are created every time a
+        function is created, at function creation time.
+      </p>
+
+
+      <p>
+        <b>lexical environment => </b>A lexical environment in JavaScript is a
+        data structure that stores the variables and functions that are defined in
+        the current scope and all of the outer scopes. It is also known as the
+        lexical scope or the lexical closure.
+      </p>
+  
+  
+
+
     <script>
+              
 
-        let a = 50;
+              // function outerouter() {
+              //   let c = 10;
 
-        function outerouter() {
-            let b = 40
-            function outer() {
-                console.log(b);
+              //   function outer() {
+              //       console.log(c);
+              //       let a = 20;
 
-                let c =30
-                
-                function inner() {
-                    console.log(a);
-                    console.log(a);
-                    console.log(a);
-
+              //       function inner() {
+              //           console.log(a);
+              //           console.log(c);
+                        
+              //       }
+              //       inner()
                     
+              //   }
+              //   outer()
+
+                
+              // }
+              // outerouter()
+
+
+             function outerouter() {
+              let a = 10;
+
+              function outer() {
+                console.log(a);
+                let b = 20;
+
+                function inner() {
+                  console.log(a);
+                  console.log(b);
+
+                  
                 }
                 inner()
                 
-            }
-            outer()
+              }
+              outer()
+              
+             }
+             outerouter()
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let a = 50;
+
+        // function outerouter() {
+        //     let b = 40
+        //     function outer() {
+        //         console.log(b);
+
+        //         let c =30
+                
+        //         function inner() {
+        //             console.log(a);
+        //             console.log(a);
+        //             console.log(a);
+
+                    
+        //         }
+        //         inner()
+                
+        //     }
+        //     outer()
             
-        }
-        outerouter()
+        // }
+        // outerouter()
     </script>
 </body>
 </html>
