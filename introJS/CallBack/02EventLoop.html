@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+</head>
+<body>
+    <h1>Event Loop</h1>
+
+    <p>
+        JavaScript has a runtime model based on an event loop, which is
+        responsible for executing the code, collecting and processing events, and
+        executing queued sub-tasks.
+    </p>
+    
+    <input type="text" value="" id="input">
+    <select name="" id="select" onchange="change()">
+        <option value="" hidden>select currency</option>
+
+        <option value="84">dollar💲</option>
+        <option value="90.10">euro €</option>
+        <option value="0.9422">ruble ®</option>
+        <option value="105.71">pound 💷</option>
+    </select>
+    <b id="abc"></b>
+
+    <script>
+        let a = document.getElementById("input")
+        console.log(a);
+
+        let b = document.getElementById("select")
+        console.log(b);
+
+        let c = document.getElementById("abc");
+        console.log(c)
+
+        function change() {
+            c.innerHTML = (a.value * b.value);
+        }
+
+    </script>
+</body>
+</html>
