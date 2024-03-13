@@ -65,27 +65,25 @@
 
 
              function outerouter() {
-              let a = 10;
+                    let c =20;
 
-              function outer() {
-                console.log(a);
-                let b = 20;
+                  function outer() {
+                    console.log(c);
+                    let a= 10;
 
-                function inner() {
-                  console.log(a);
-                  console.log(b);
+                      function inner() {
+                        console.log(c);
+                        console.log(a);
+                        
+                      }
+                      inner()
 
+
+                  }
+                  outer() 
                   
-                }
-                inner()
-                
-              }
-              outer()
-              
              }
              outerouter()
-        
-
 
 
 

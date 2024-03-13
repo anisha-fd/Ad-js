@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highter order function</title>
+</head>
+
+<body>
+    <script>
+
+
+         let radius = [2, 4, 6, 8];
+
+         const calculate = function (radius,logic) {
+            const output =[];
+            for (let i = 0; i < radius.length; i++) {
+
+                 output.push(logic(radius[i]));
+
+            }
+            return output;
+         };
+
+         const area = function (radius) {
+            return Math.PI * radius * radius;
+         };
+         const circumference = function (radius) {
+            return 2 * Math.PI * radius;
+         };
+         const diameter = function (radius) {
+            return 2 * radius;
+         };
+
+         console.log(calculate(radius, area));
+         console.log(calculate(radius, circumference));
+         console.log(calculate(radius, diameter));
+
+
+
+
+
+
+        // let radius = [2, 4, 6, 8];
+
+
+        // const calculate = function (radius, logic) {
+        //     const output = [];
+        //     for (let i = 0; i < radius.length; i++) {
+        //         output.push(logic(radius[i]));
+        //     }
+        //     return output;
+        // };
+
+        // const area = function (radius) {
+        //     return Math.PI * radius * radius;
+        // };
+        // const circumference = function (radius) {
+        //     return 2 * Math.PI * radius;
+        // };
+        // const diameter = function (radius) {
+        //     return 2 * radius;
+        // };
+
+        // console.log(calculate(radius, area));
+        // console.log(calculate(radius, circumference));
+        // console.log(calculate(radius, diameter));
+    </script>
+</body>
+
+</html>

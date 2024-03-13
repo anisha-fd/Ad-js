@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Card</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .row span {
+            text-decoration: line-through;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 90px;
+            margin-left: 95px;
+        }
+        
+
+       
+    </style>
+</head>
+
+<body>
+    <h1>Myntra card</h1>
+    <div class="container">
+        <div class="box" id="card">
+            <!-- <img src="../Task/t-shirt-1.webp " >
+            <h3>Tokyo Talkies</h3>
+            <p>Printed Crop T-shirt</p>
+            <p><b>Rs.298</b> <span>Rs.649</span> (54% off) </p> -->
+        </div>
+
+    </div>
+
+    <script>
+
+   let arr = [
+               "../Task/t-shirt-1.webp ",
+               "../Task/t-shirt-2.webp ",
+               "../Task/t-shirt-3.webp " ,
+               "../Task/t-shirt-4.webp " ,
+               "../Task/t-shirt-1.webp " ,
+               "../Task/t-shirt-2.webp " ,
+               "../Task/t-shirt-3.webp " ,
+               "../Task/t-shirt-4.webp " ,
+               "../Task/t-shirt-1.webp " ,
+               "../Task/t-shirt-2.webp " ,
+            
+            ];
+    let arry =[
+        ""
+    ]        
+            let i=0;
+
+    function card() {
+      arr.forEach((element) => {
+        let node = document.createElement("div");
+        node.setAttribute("class", "col");
+        let text =`<div class="container">
+        <div class="row" id="card">
+            <img src="${arr[i]}"  >
+            <h3>Tokyo Talkies</h3>
+            <p>Printed Crop T-shirt</p>
+            <p><b>Rs.298</b> <span>Rs.649</span> (54% off) </p>
+        </div>
+
+        
+
+   </div> `
+   
+    
+    ;
+    i++;
+        let textnode = document.createTextNode(text);
+        node.innerHTML = text;
+        document.getElementById("card").appendChild(node);
+      });
+    }
+    card();
+
+    
+            
+    </script>
+</body>
+
+</html>
