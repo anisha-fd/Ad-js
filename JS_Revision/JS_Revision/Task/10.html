@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+
+    <script>
+        var input = document.createElement("input");
+
+        input.type = "text";
+        input.placeholder = "enter name";
+        input.id  = "nameid";
+
+        var div = document.getElementById("mydiv");
+
+        div.appendChild(input);
+
+        var btn = document.createElement("button");
+        btn.textContent = "click me";
+        btn.id = "btnid"
+
+        div.appendChild(btn);
+
+        var ul = document.createElement("ul");
+        btnid.addEventListener("click" , function(){
+                var yourname = document.getElementById("nameid").value;
+                // console.log(yourname);
+                var li = document.createElement("li");
+                li.textContent = yourname;
+                // console.log(li);
+                ul.appendChild(li);
+                div.appendChild(ul)
+                document.getElementById("nameid").value = "";
+
+
+        })
+        
+    </script>
+</body>
+</html>

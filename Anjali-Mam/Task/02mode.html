@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        main{
+            margin: 5vh 15%;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        img{
+            width: 50%;
+            height: auto;
+            /* margin: 0 auto; */
+        }
+        p{
+            text-align: justify;
+            font-size: 18px;
+        }
+        label{
+            position:absolute;
+            width: 70px;
+            height: 35px;
+            right: 22px;
+            top: 22px;
+            border: 2px solid;
+            border-radius: 20px;
+
+        }
+        label::before{
+            position: absolute;
+            content: "";
+            width: 35px;
+            height: 35px;
+            left: 2px;
+            top: 0px;
+            /* border: 2px solid; */
+            border-radius: 50%;
+            cursor: pointer;
+            background: #0d0d0d;
+            transition: 0.4s;
+
+        }
+        label.active:before{
+            left: 32px;
+            background: #fff;
+
+        }
+        body.night{
+            background: #000;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <label id="dark-change"></label>
+
+    </header>
+    <main>
+        <h1>Dark & Light Mode</h1>
+        <div id="respon">
+            <img src="../Task/light-lamp-grile.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptas hic ipsa, dolor nisi debitis
+                dolorum officia error sint omnis magnam sunt provident at tempore voluptate quas veniam libero qui
+                numquam repellendus? Neque id voluptates nihil sed. Autem vero dolores dolorem nisi qui nesciunt eveniet
+                minima fugiat similique! Animi maxime minima magnam voluptate nesciunt eveniet non adipisci nulla a
+                atque, iste, cupiditate, quasi doloribus. Cum exercitationem aut reiciendis saepe at ratione non harum
+                quia, quod dolorum, illo nisi, doloremque corporis! Deleniti fugiat illo necessitatibus voluptatem,
+                doloremque unde, rem dignissimos eveniet sed architecto eius nemo delectus autem earum voluptate sit
+                nulla.</p>
+        </div>
+
+    </main>
+
+
+    <script>
+        var content = document.getElementsByTagName("body")[0];
+        var darkmode = document.getElementById("dark-change");
+
+        document.addEventListener("click",function(){
+            darkmode.classList.toggle("active");
+            content.classList.toggle("night");
+        })
+    </script>
+</body>
+
+</html>

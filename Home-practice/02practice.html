@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pera{
+            background-color: cadetblue;
+            color: black;
+            height: 130px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta alias consequatur fugit accusamus quas debitis
+        possimus exercitationem impedit iusto. Neque magnam sit quibusdam laboriosam repellat deserunt minima eveniet
+        voluptatem veniam, inventore minus libero ex accusamus molestias. Repudiandae sint possimus culpa sit voluptatem
+        veritatis, eaque laudantium voluptas quia quaerat earum. Tempore doloribus vero, aliquam commodi fuga voluptatum
+        doloremque harum explicabo molestias fugit ab ipsum beatae ullam similique. Similique quod molestiae provident
+        veritatis nostrum. Itaque, ipsam. Nam et laboriosam perferendis ad! Asperiores pariatur quaerat quas beatae,
+        impedit distinctio architecto quae minus cum provident sapiente culpa a rem consequuntur numquam officia, sequi
+        nisi.</p>
+
+        <button id="btn">Click Me</button>
+
+        <script>
+
+            var mybtn = document.getElementById("btn");
+            mybtn.addEventListener("click",function(){
+            
+            var myp = document.querySelector("p");
+            console.log(myp);
+            myp.classList.add("pera");     
+            })
+
+           
+        </script>
+
+</body>
+
+</html>

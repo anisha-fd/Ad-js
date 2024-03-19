@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="darker">dark mode on</button>
+    <button id="lighter">dark mode off</button>
+
+    <div id="box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+
+    </div>
+    <div id="box">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nisi?</p>
+
+    </div>
+ 
+    <script>
+            let dark = document.getElementById("darker");
+
+            let boxjs = document.getElementById("box");
+
+            let check = document.body
+            
+            dark.addEventListener("click" , function(){
+                    check.style.color = "white";
+                    check.style.backgroundColor = "Black";
+                    
+            })
+
+            lighter.addEventListener("click" , function(){
+                    check.style.color = "Black";
+                    check.style.backgroundColor = "White";
+                    
+            })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change Task</title>
+    <style>
+       
+         .thumnail img{
+            height: 70px;
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+            
+            
+         }
+         .maincountainer img{
+            height: 350px;
+            width: 350px;
+            margin-top: -355px;
+            margin-left: 150px;
+         }
+
+    </style>
+</head>
+<body>
+    <h1>Flipkart Image change</h1>
+<div class="main">
+
+    <div class="thumnail">
+      <img src="../image/img-1.webp" alt="">
+      <img src="../image/img-2.webp" alt="">
+      <img src="../image/img-3.webp" alt="">
+      <img src="../image/img-4.webp" alt="">
+      <img src="../image/img-5.webp" alt="">
+
+    </div>
+    <div class="maincountainer">
+        <img src="../image/img-1.webp" alt="">
+
+    </div>
+</div>
+
+   <script>
+
+    var allimg = document.querySelectorAll(".thumnail img");
+    console.log(allimg);
+
+    allimg.forEach(function(img){
+        img.addEventListener("click",function(){
+
+        var mypath = this.getAttribute("src")
+        console.log(mypath);
+
+        var preview = document.querySelector(".maincountainer img");
+        console.log(preview);
+
+        preview.setAttribute("src",mypath);
+
+
+        })
+    })
+
+
+
+   </script>
+
+   
+</body>
+</html>

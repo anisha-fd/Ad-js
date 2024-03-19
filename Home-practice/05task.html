@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pera {
+            color: blue;
+            background-color: bisque;
+            text-align: center;
+            box-shadow: 0 0 0 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque adipisci hic porro ipsam modi magnam
+            voluptates pariatur eveniet. Iste rerum sequi voluptatum sed modi eius autem? Esse, iste! Nostrum, ab neque!
+            Officiis accusantium, quam architecto possimus ratione eveniet natus sapiente. Inventore minus natus iure
+            doloribus. Nihil nesciunt laboriosam itaque veritatis!</h1>
+        <button id="btn">Click Here</button>
+    </div>
+    <script>
+
+        var part = document.getElementById("btn");
+        part.addEventListener("click", function () {
+            var btn = document.querySelector("h1");
+            console.log(btn);
+            btn.classList.add("pera");
+        })
+    </script>
+</body>
+
+</html>

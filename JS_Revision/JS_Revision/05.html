@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .green{
+            color: pink;
+        }
+   
+    </style>
+</head>
+
+<body>
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>   
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+        <p class="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, repellendus?</p>    
+ 
+</body>
+
+
+
+<script>
+
+        var storage = document.querySelectorAll(".para")    ;
+
+        // console.log(storage);
+
+        storage.forEach(function(element,index){
+            var arr1 = ["red" , "blue" , "green"];
+            element.classList.add(arr1[index%arr1.length])
+
+
+        })
+
+    
+
+
+
+
+</script>
+</html>

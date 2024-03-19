@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box img{
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+        }
+        .main img{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <img src="/images/img1.webp" alt="">
+    <img src="/images/img2.jpeg" alt="">
+    <img src="/images/img3.jpeg" alt="">
+   
+</div>
+
+    <div class="main">
+        <img src="/images/img1.webp" alt="">
+        
+    </div>
+
+
+    <script>
+        var first = document.querySelectorAll(".box img");
+
+        // console.log(first);
+
+       
+        first.forEach(function(element){
+            element.addEventListener("click", function(){
+                // console.log("ther");
+
+                var path = this.getAttribute("src");
+                // console.log("this is path");
+
+                var submission = document.querySelector(".main img");
+                submission.setAttribute("src", path)
+                // console.log("done");
+
+            })
+        })
+    </script>
+
+</body>
+</html>

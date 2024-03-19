@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style>
+        .main{
+            display: flex;
+        }
+        .box1 img{
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            margin-left: 40px;
+            border: 1px solid black;
+            margin-top: 300px;
+            display: grid;
+
+        }
+        .box2 img{
+            height: 500px;
+            width: 200px;
+            margin-top: 100px;
+            margin-left: 100px;
+
+        }
+        .box1{
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    
+    <div class="box1">
+        <img src="../images/flip1.webp" alt="">
+        <img src="../images/flip2.webp" alt="">
+        <img src="../images/flip3.webp" alt="">
+       
+    </div>
+
+    <div class="box2">
+        <img src="../images/img4.png" alt="">
+    </div>
+     
+
+    </div>
+
+    <script>
+
+            let boxhere = document.querySelectorAll(".box1 img");
+
+            // console.log(boxhere);
+            boxhere.forEach(function (element){
+                    element.addEventListener("click", function(){
+                            let path = this.getAttribute("src");
+
+                    let box2here = document.querySelector(".box2 img");
+
+                        box2here.setAttribute("src", path)
+
+                    })
+                    
+            })
+
+
+
+
+
+            // console.log(boxhere);
+
+    </script>
+</body>
+</html>

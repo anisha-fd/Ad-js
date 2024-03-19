@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>hello frends..!!!</h1> 
+   <p>JavaScript is here</p>
+   <h1>yes..</h1>
+   <p>oky oky</p>
+   <h1>continue</h1>
+
+   <button id="btn">Button Click</button>
+
+   <script>
+         var mybtn = document.getElementById("btn");
+         mybtn.addEventListener("click",function(){
+
+            var allh1 = document.querySelectorAll("h1");
+            console.log(allh1);
+
+            console.log(allh1[0]);
+
+            allh1.forEach(function (element) {
+                console.log(element);
+                element.style.color = "blue";
+                element.style.backgroundColor = "pink";
+                element.style.border = "2px solid black"
+            });
+
+         })
+
+        // var mybtn = document.getElementById("btn");
+        // mybtn.addEventListener("click",function(){
+        //     var allp = document.querySelectorAll("p");
+        //     console.log(allp);
+        //     console.log(allp[0]);
+
+        //     allp.forEach(function (element) {
+        //         console.log(element);
+        //         element.style.color = "red";
+        //     });
+        // })
+   </script>
+
+</body>
+</html>

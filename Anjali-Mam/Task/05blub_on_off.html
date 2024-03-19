@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blub on-off task</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+   <h1>Bulb On-OFF</h1>
+
+   <img src="blub-OFF-img.png"  id="bulb"     alt="" width="200px" height="200px">
+   <p>
+    <button type="button" onclick="light(1)"> ON</button>
+    <button type="button" onclick="light(0)"> OFF</button>
+   </p>
+
+   <script>
+      function light(show){
+
+        var pic;
+        if(show == 0){
+            pic = "blub-OFF-img.png";
+        }
+        else{
+            pic = "blub-ON -img.jpg";
+        }
+        document.getElementById('bulb').src = pic;
+      }
+   </script>
+
+    
+</body>
+</html>

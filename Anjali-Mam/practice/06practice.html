@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumnail img{
+            height: 60px;
+            width: 60px;
+        }
+        .maincountainer{
+            height: 350px;
+            width: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="thumnail">
+         <img src="../image/Image (1).png">
+         <img src="../image/Image (2).png">
+         <img src="../image/Image (3).png">
+         <img src="../image/Image (1).png">
+         <img src="../image/Image (2).png">
+
+    </div>
+
+    <div class="maincountainer">
+
+        <img src="../image/Image (1).png">
+
+        </div>
+
+        <script>
+
+                var allimg = document.querySelectorAll(".thumnail img");
+                console.log(allimg);
+
+                allimg.forEach(function (img) {
+                    img.addEventListener("click",function(){
+
+                      //  ger img src from selected element
+                      var mypath = this.getAttribute("src")
+                      console.log(mypath);
+
+
+                      var preview = document.querySelector(".maincountainer img");
+                      console.log(preview);
+
+                      //set preview get src image
+                      preview.setAttribute("src",mypath);
+                    })
+                })
+      </script>
+    
+</body>
+</html>

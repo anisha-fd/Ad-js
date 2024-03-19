@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            .sub .ans{
+                display: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub">
+            <div class="que">
+                <h1>what is html</h1>
+            </div>
+            <div class="ans">
+                <h1> html is </h1>
+            </div>
+            
+        </div>
+        <div class="sub">
+            <div class="que">
+                <h1> what is html </h1>
+            </div>
+            <div class="ans">
+                <h1>  html is</h1>
+            </div>
+            
+        </div>
+    </div>
+
+        <script>
+            var all = document.querySelectorAll(".sub .que");
+
+            console.log(all);
+
+            all.forEach(function (que){
+                que.addEventListener("click", function(){
+                        var ans = this.nextElementSibling;
+                        if(ans.style.display ==="none"){
+
+                            ans.style.display ="block";
+                        }
+                        else{
+                            ans.style.display ="none";
+                            
+                        }
+
+                } )
+
+
+            })
+        </script>
+</body>
+</html>

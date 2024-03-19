@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .even{
+            background-color: blanchedalmond;
+            color: black;
+            height: 30px;
+        }
+        .odd{
+            background-color: cadetblue;
+            color: blue;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p id="mytag">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <script>
+
+        var myalltags = document.querySelectorAll("#mytag");
+        console.log(myalltags);
+
+        myalltags.forEach(function(p,index) {
+            console.log(p);
+            console.log(index);
+
+         if (index%2==0) {
+            p.classList.add("even");
+         } else {
+            p.classList.add("odd");
+         }   
+        });
+    </script>
+</body>
+</html>
