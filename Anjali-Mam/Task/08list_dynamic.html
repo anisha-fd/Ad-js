@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List dynamic create</title>
+
+</head>
+<body>
+    
+
+
+
+<script>
+          
+          let input = document.createElement("input");
+          console.log(input);
+          document.body.append(input)
+
+          input.setAttribute("type","text");
+          input.setAttribute("id" ,"myinput");
+          input.setAttribute("placeholder","Enter Your List");
+
+          let btn = document.createElement("button");
+          console.log(btn);
+          document.body.append(btn)
+
+          btn.setAttribute("id","mybtn")
+          btn.textContent ="Click";
+
+
+          btn.addEventListener("click",function(){
+            let li = document.createElement("li");
+
+            li.innerText = input.value;
+            document.body.append(li)
+            input.value = ""
+          })
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

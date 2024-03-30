@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv{
+                height: 400px;
+                width: 400px;
+                background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv">
+
+    </div>
+
+    <script>
+
+        let div = document.querySelector(".mydiv");
+        let marginLeftValue = 0;
+
+           
+        document.addEventListener("keydown",function(e){
+            //    console.log(e.key);
+
+               if(e.key === "ArrowRight")
+               {
+                console.log("------> RIght key Press");
+                div.style.marginLeft = marginLeftValue + "px";
+
+               }
+               marginLeftValue +=10;
+        })
+    </script>
+</body>
+</html>

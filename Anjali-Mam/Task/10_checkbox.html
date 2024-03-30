@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="checkAll" />Select All
+
+    <input type="checkbox" class="checkbox">React Js
+    <input type="checkbox" class="checkbox">Java
+    <input type="checkbox" class="checkbox">C Language
+    <input type="checkbox" class="checkbox">Python
+
+    <script>
+
+
+        let selectCheckbox = document.querySelectorAll(".checkbox");
+        console.log(selectCheckbox);
+
+        
+        let allCheckbox = document.querySelector("#checkAll");
+        // console.log(allCheckbox);
+        
+        selectCheckbox.addEventListener("change", function (e) {
+            allCheckbox.forEach(function (chk) {
+                // console.log(chk);
+
+                 chk.selectall = selectCheckbox;
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

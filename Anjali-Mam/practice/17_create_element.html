@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="myid" placeholder="Enter your data"> -->
+    <!-- creat input box
+    create button
+    on btn click
+    get value from input box
+    creat one more elemnet h1
+    store inputt valuee in h1  -->
+
+
+    <script>
+
+        let input = document.createElement("input");
+        input.setAttribute  ("type","text");
+        input.setAttribute("id","nameid")
+        input.setAttribute("placeholder","Enter Your Name")
+        console.log(input);
+        document.body.append(input);
+
+        let button = document.createElement("button");
+        button.setAttribute("id","mybtn")
+        button.innerText= "CLICK"
+        console.log(button);
+        document.body.append(button);
+
+        button.addEventListener("click",function(){
+            let h2 = document.createElement("h2");
+            h2.textContent = input.value // ya innerTax bhi le sakte hai
+            console.log(h2);
+            document.body.append(h2)
+            input.value = ""
+        })
+
+
+
+
+
+
+
+        // let input = document.createElement("input");
+        // console.log(input);
+
+        // input.setAttribute("type","text");
+        // input.setAttribute("id","nameid");
+        // input.setAttribute("placeholder","Enter your name");
+        // document.body.append(input);
+
+        // let mybtn = document.createElement("button");
+        // console.log(mybtn);
+        // document.body.append(mybtn);
+        // mybtn.textContent="Click";
+
+        // mybtn.addEventListener("click",function(){
+        //     let h2 = document.createElement("h2");
+        //     // console.log(h2);
+        //     h2.innerText = input.value
+        //     document.body.append(h2);
+        //     input.value = ""
+
+        // })
+        
+
+        
+
+        
+
+        
+
+     
+
+
+
+
+    </script>
+</body>
+</html>

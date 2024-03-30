@@ -6,7 +6,10 @@
     <title>Blub on-off task</title>
     <style>
         body{
-            background-color: black;
+            /* background-color: black; */
+        }
+        img{
+            margin: 0 auto;
         }
 
     </style>
@@ -15,7 +18,7 @@
 
    <h1>Bulb On-OFF</h1>
 
-   <img src="blub-OFF-img.png"  id="bulb"     alt="" width="200px" height="200px">
+   <img src="bulb-off.jpg"  id="bulb"     alt="" width="500px" height="500px">
    <p>
     <button type="button" onclick="light(1)"> ON</button>
     <button type="button" onclick="light(0)"> OFF</button>
@@ -26,10 +29,10 @@
 
         var pic;
         if(show == 0){
-            pic = "blub-OFF-img.png";
+            pic = "bulb-off.jpg";
         }
         else{
-            pic = "blub-ON -img.jpg";
+            pic = "bulb-on.jpg";
         }
         document.getElementById('bulb').src = pic;
       }

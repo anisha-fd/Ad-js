@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mycard{
+            position: relative;
+        }
+        .card-1{
+            position: absolute;
+            z-index: 5;
+           
+           
+        }
+        .card-2{
+            position: absolute;
+            z-index: 4;
+            top: 30px;
+            
+        }
+        .card-3{
+            position: absolute;
+            z-index: 3;
+            top: 50px;
+        }
+        .card-4{
+            position: absolute;
+            z-index: 2;
+            top: 90px;
+        }
+        .card-5{
+            position: absolute;
+            z-index: 1;
+           top: 120px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div id="mycard">
+        <img src="../Task/card-4.jpg" alt="" class="card-1">
+        <img src="../Task/card-2.jpg" alt="" class="card-2">
+        <img src="../Task/card-3.jpg" alt="" class="card-3">
+        <img src="../Task/card.jpg" alt="" class="card-4">
+        <img src="../Task/card-5.jpg" alt="" class="card-5">
+       
+    </div>
+
+    <script>
+         let div = document.querySelector(".card-1");
+        let marginLeftValue = 0;
+
+           
+        document.addEventListener("keydown",function(e){
+            //    console.log(e.key);
+
+               if(e.key === "ArrowRight")
+               {
+                console.log("------> RIght key Press");
+                div.style.marginLeft = marginLeftValue + "px";
+
+               }
+               marginLeftValue +=500;
+        })
+        
+    </script>
+</body>
+</html>

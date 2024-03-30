@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+   <input type="text" id="myname" placeholder="Enter your Name">
+   <button id="mybtn">Add</button>
+
+   <ul id="myul"></ul>
+
+    <script>
+
+        var btn = document.getElementById("mybtn");
+
+        btn.addEventListener("click",function(){
+
+            var name = document.getElementById("myname");
+            console.log(name.value);
+
+            var li = document.createElement("li")
+            li.textContent = name.value;
+            console.log(li);
+            
+
+            var ul = document.getElementById("myul");
+            ul.append(li);
+
+            name.value = "" //clear input box 
+        })
+
+
+            
+
+            
+
+
+
+    
+    </script>
+</body>
+</html>
+
+
+<!-- input and button bnayu button click event -->
+
+<!-- ul get kravyu -->
+
+<!-- li store -->
+
+<!-- ul create -->

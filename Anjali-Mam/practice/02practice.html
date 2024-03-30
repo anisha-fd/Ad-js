@@ -8,30 +8,42 @@
         .myclass{
             background-color: blueviolet;
             color: white;
-            height: 30px;
+            text-align: center;
+            font-style: italic;
+            height:60px;
+            text-shadow: 0px 0px 20px rgb(21, 20, 20);
+            /* box-shadow: 0 10 10 15 rgb(16, 16, 18); */
+            
         }
     </style>
 </head>
 <body>
 
     
-    <h1>hey welcome to JavaScript</h1>
+    <h1>Hey Welcome to JavaScript</h1>
     <button id="mybtn">Click Here</button>
 
 
     <script>
 
-        var btn = document.getElementById("mybtn");
-        btn.addEventListener("click",function(){
-        var myh1 = document.querySelector("h1");
-        console.log(myh1);
-        myh1.classList.add("myclass");
-        //  myh1.style.color = "red";
-        //  console.log(myh1);
+        // var btn = document.getElementById("mybtn");
+        // btn.addEventListener("click",function(){
+        // var myh1 = document.querySelector("h1");
+        // console.log(myh1);
+        // myh1.classList.add("myclass");
+        // //  myh1.style.color = "red";
+        // //  console.log(myh1);
             
-        })
-    
+        // })
 
+       var btn = document.getElementById("mybtn");
+       btn.addEventListener("click",function(){
+
+        var myh = document.querySelector("h1");
+        console.log(myh);
+        myh.classList.add("myclass");
+
+       })
        
     </script>
     

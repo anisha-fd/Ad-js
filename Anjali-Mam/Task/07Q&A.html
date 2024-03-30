@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Task</title>
+    <style>
+        body{
+            /* background-image: url(../Task/bg-image.jpg); */
+            background-color: black;
+            color: white;
+            
+        }
+        h1{
+            /* text-align: center; */
+        }
+        .subcountainer .que {
+            background-color: cadetblue;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .subcountainer .ans {
+            background-color: cadetblue;
+            color: black;
+            font-size: 20px;
+            height: 74px;
+            margin-top: -27px;
+            display: none;
+        }
+        .ans p{
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- <h1>Q & A</h1> -->
+
+    <div class="maincontainer">
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>1. What is HTML?</h1>
+            </div>
+            <div class="ans">
+                <p>⮑ 
+                    HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages.<br>
+                   <pre>  HTML describes the structure of a Web page.</pre> </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>2.What are void elements in HTML</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ HTML elements which do not have closing tags or do not need to be closed are Void
+                    elements. For Example br , img , hr , etc
+                </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>3. What is JavaScript?</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ JavaScript is a scripting language used to develop web pages.
+                    <br> Developed in Netscape, JS
+                    allows
+                </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>4.Which company developed JavaScript?</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ JavaScript was created at Netscape Communications by Brendan Eich in 1995.
+                    <br>Netscape and Eich
+                    designed JavaScript as a scripting language for
+                    <br> use with the company's flagship web browser,
+                    Netscape Navigator.
+                </p>
+                </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>5.What are undeclared and undefined variables?</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ Undeclared variables are those that have not been declared or defined <br>in the current scope,
+                    while undefined variables are those that have been<br> declared but not given a value.</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>6. What are the benefits of using CSS?</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ There are many type of benefits 1) Faster Page Speed. More code means slower page speed
+                    2) Quicker Development Time.<br>3) Easy Formatting Changes. 4) Compatibility Across Devices.</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>7. What is embedded style sheets?</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ It allows you to define styles for a <br>
+                    particular HTML document as a whole in one place.</p>
+                </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>8. What is === operator?</h1>
+            </div>
+            <div class="ans">
+                <p> ⮑ The === operator compares operands and returns true if both operands are of<br>
+                    the same data type and have some value, otherwise, it returns false.</p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>9. What are the new tags added in HTML5? </h1>
+            </div>
+            <div class="ans">
+                <p>⮑ article, aside , details,figcaption, figure, footer, header, main , nav ,section </p>
+            </div>
+        </div>
+
+        <div class="subcountainer">
+            <div class="que">
+                <h1>10. What is the use of isNaN function? </h1>
+            </div>
+            <div class="ans">
+                <p>⮑ isNaN() returns true if a number is Not-a-Number. In other words: <br>isNaN() converts the value to
+                    a number before testing it. </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+
+        var allque = document.querySelectorAll(".subcountainer .que");
+        console.log(allque);
+
+        allque.forEach(function(que){
+            console.log(que);
+
+          que.addEventListener("click",function(){
+            console.log("clicked");
+
+        let ans = this.nextElementSibling;
+        console.log(ans);
+
+        if (ans.style.display == "block") {
+            
+            ans.style.display = "none"
+        } else {
+            ans.style.display = "block"
+        }
+
+          })  
+
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

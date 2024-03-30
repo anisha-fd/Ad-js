@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Box</title>
+    <style>
+        .newdiv {
+            height: 70px;
+            width: 70px;
+            margin-top: 10px;
+            box-shadow: 10px 10px 5px lemonchiffon;
+        }
+    </style>
+
+    <!-- create input -->
+    <!-- create button -->
+    <!-- click event -->
+    <!-- create div -->
+    <!-- color change in different div-->
+</head>
+
+<body>
+
+
+    <script>
+
+        // let input = document.createElement("input");
+        // console.log(input);
+
+        // input.setAttribute("type", "text");
+        // input.setAttribute("id", "myinput");
+        // input.setAttribute("placeholder", "Enter Your Color");
+        // document.body.append(input)
+
+
+        // let button = document.createElement("button");
+        // console.log(button);
+
+        // button.textContent = "Add Color"
+        // document.body.append(button)
+
+        // button.addEventListener("click", function () {
+
+        //     let div = document.createElement("div");
+        //     console.log(div);
+        //     div.setAttribute("class", "newdiv")
+
+        //     div.className = "newdiv"
+        //     div.style.backgroundColor = input.value
+
+        //     document.body.append(div)
+        //     input.value = ""
+        // })
+
+
+       let input = document.createElement("input");
+       console.log(input);
+       input.setAttribute("type","text");
+       input.setAttribute("id","myinput");
+       input.setAttribute("placeholder","Enter Your color");
+       document.body.append(input);
+
+       let button = document.createElement("button");
+       console.log(button);
+       button.setAttribute("id","mybtn");
+       button.textContent = "Add Color"
+       document.body.append(button);
+
+       button.addEventListener("click",function(){
+        
+        let div = document.createElement("div");
+        console.log(div);
+
+        div.setAttribute("class","newdiv");
+        div.className = "newdiv"             // classlist bhi use kar sakte hai
+        div.style.backgroundColor = input.value
+        document.body.append(div)
+
+
+
+       })
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+

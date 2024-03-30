@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Element</title>
+    <style>
+        .subcontainer .que {
+            background-color: brown;
+            color: white;
+            height: 30px;
+        }
+
+        .subcontainer .ans {
+            background-color: aqua;
+            color: black;
+            padding-top: 20px;
+            height: 40px;
+            display: none;
+        }
+        .ans p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+
+        <div class="subcontainer">
+            <div class="que">
+                <h1>What is HTML?</h1>
+            </div>
+            <div class="ans">
+                <p>html is hyper text markup language</p>
+            </div>
+        </div>
+
+        <div class="subcontainer">
+            <div class="que">
+                <h1>What is JS?</h1>
+            </div>
+            <div class="ans">
+                <p>javascript is scripted language</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let allque = document.querySelectorAll(".subcontainer .que");
+        console.log(allque);
+
+        allque.forEach(function (que) {
+            console.log(que);
+
+            que.addEventListener("click", function () {
+                console.log("clicked");
+
+
+                let ans = this.nextElementSibling;
+                console.log(ans);
+
+                if (ans.style.display == "block") {
+
+                    ans.style.display = "none";
+                } else {
+                    ans.style.display = "block";
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
