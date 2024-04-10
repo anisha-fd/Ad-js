@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="objtojson()">Convert object to Json</button>
+
+    <button onclick="jsontoObject()">Converrt Json to Object</button>
+
+    <script>
+
+        function objtojson(){
+
+            var obj = {name : "Riya",subject : "Mern",book_price :788.80};//object to json
+
+            console.log(obj); // it will display object
+
+            let jsonOutput = JSON.stringify(obj);
+            console.log(jsonOutput);
+        }
+
+        function jsontoObject(){
+            var jsonData = JSON.stringify({"name":"Riya","subject":"Mern","book_price":788.8});
+            console.log("JSON : ",jsonData);
+
+            //convert back json object to js object
+
+            var js_obj = JSON.parse(jsonData);
+            console.log("OBJECT :",js_obj);
+        }
+    </script>
+    
+</body>
+</html>

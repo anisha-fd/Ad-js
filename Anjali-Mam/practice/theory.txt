@@ -1,0 +1,75 @@
+Array :  Array is a collection of similar data elements
+
+array always represent by [] braces
+
+syntex:
+
+let myarray = [];
+
+methods/ functions
+
+
+"string" = wo immutable hai isme hum koi bhi index value change nahi kar sakte
+
+Array = mutteble hai value change kar sakte hai
+
+=> push() : to add specific element at run time in exisiting array 
+
+myarray.push(nem_elemnet)
+
+
+=>length() : to return length of array
+
+=>pop() : remove of last element in list, and pop jo item remove kiya hai wo hi display karega
+
+=>Shift : remove first index element from the array.
+
+         myarray = shift()
+
+=>unshift(): add specific element at first index position
+
+        myarray.unshift(newElement) 
+
+ 
+        
+        
+=> splice() : to remove specific element from the specific position
+
+            var myarray = ["c","c++","java","python","react"]
+             e.g splice (start_index_position, no of element for delete)
+
+
+             myarray.splice(2,3)
+
+             var myarray = ["c","c++","React"]
+
+             => remove specific element from the specific position and add new element and replace
+
+              e.g. subjectlist.splice(2,1,"node","react","MERN")
+
+              => add specific element at specific position 
+
+            e.g. myarray.splice(2,0,"FLUTTER")
+            ['C', 'C++', 'FLUTTER', 'Java', 'Python', 'Node', 'React']
+   
+
+
+
+
+=> indexof() : return respective element's index position
+
+              e.g myarray.inddexOF(element);
+
+
+=> filter() : to remove specific from the array , filter return as  new array 
+
+  var myarray =  ["c","c++" ,"java","pyton"]
+
+
+  removeitem = "c++";
+  myarray.filter(item => item!== "c++")
+---------------------------------------------------------------------------
+
+=> object : A colection of key and pair value 
+
+

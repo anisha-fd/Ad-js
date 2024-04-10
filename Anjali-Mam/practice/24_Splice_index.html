@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul {
+            padding: 13px;
+        }
+        .high{
+            color: red;
+            font-size: 20px;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <input type="text" id="findid" placeholder="enter which you want  to find ">
+    <input type="text" id="replaceid" placeholder="enter which you want  to replce ">
+
+    <button onclick="applyChange()">Apply</button>
+
+    <ul id="myul">
+        <!-- <li></li> -->
+    </ul>
+
+    <script>
+
+        var subjectlist = ["c", "c++", "java", "python", "nodejs"];
+        let ul = document.querySelector("#myul");
+
+        function displayArray() {
+
+            ul.innerHTML = "";
+            subjectlist.forEach(function (subject) {
+                let li = document.createElement("li");
+                
+                li.textContent = subject;
+                
+
+                ul.append(li);
+            })
+
+        }
+        displayArray();
+
+
+        function applyChange() {
+            // console.log("click");
+
+            let findElemet = document.getElementById("findid").value;
+            let newElement = document.getElementById("replaceid").value;
+            if (subjectlist.includes(findElemet.toLowerCase())) {
+                console.log("yes element is exist");
+              
+                //index position
+
+                let start_index = subjectlist.indexOf(findElemet.toLowerCase());
+
+                // subject_splice(startelement_Index_no_of_count, newelement)
+                subjectlist.splice(start_index, 1, newElement )
+                // newelement.style.color = "red";
+                console.log(subjectlist);
+
+            
+
+               displayArray();
+            }
+            else {
+                console.log("No found result !");
+            }
+
+            let li = document.querySelector("li");
+            // console.log(li);
+            li.classList.add("high")
+            
+            
+
+
+
+            
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="mysubject" placeholder="Enter your subject">
+    <button id="btnsubmit">Add</button>
+
+    <ul id="myid">
+
+    </ul>
+
+    <script>
+
+        let myArray = [];
+
+
+
+        document.getElementById("btnsubmit").addEventListener("click",function(){
+            let subject = document.getElementById("mysubject").value;
+            // console.log(subject);
+            myArray.push(subject);
+            // console.log(myArray);
+
+            displayData();
+
+
+
+        })
+        let ul = document.querySelector("#myid");
+
+        function displayData(){
+            myArray.forEach(function(item){
+                console.log(item);
+                let li = document.createElement("li");
+                li.textContent = item
+                
+                ul.innerHTML = ""
+                ul.append(li);
+            })
+
+            let alliTags = document.querySelectorAll("li");
+            console.log("----------->>" ,alliTags);
+
+            alliTags.forEach(function(item){
+                item.addEventListener("click",function(e){
+                        console.log(item.innerText);
+
+                        let removeitem = item.innerText
+                        console.log(removeitem);
+
+                        myArray = myArray.filter(item => item!== removeitem);
+                        console.log(myArray);
+                        displayData()
+
+                })
+            })
+
+        }
+
+
+
+    //  let myarray = [];
+
+    //  document.getElementById("btnsubmit").addEventListener("click",function(){
+    //     let subject = document.getElementById("mysubject").value;
+    //     // console.log(subject);
+    //     myarray.push(subject);
+    //     // console.log(myarray);
+
+    //     displayData();
+
+    //  })
+
+    //  let ul = document.querySelector("#myid");
+
+    //  function displayData(){
+    //     ul.innerHTML = ""
+    //     myarray.forEach(function(item){
+    //         // console.log(item);
+    //         let li = document.createElement("li");
+    //         li.textContent = item;
+
+    //         ul.append(li);
+
+    //     })
+
+    //     let alliTags = document.querySelectorAll("li");
+    //     // console.log("----------->>",alliTags);
+
+    //     alliTags.forEach(function(item){
+    //         item.addEventListener("click",function(e){
+    //             // console.log(item.innerText);
+
+    //             let removeitem = item.innerText;
+    //             console.log(removeitem);
+
+    //             myarray = myarray.filter(item => item!== removeitem);
+
+    //             console.log(myarray);
+    //             displayData();
+    //         })
+    //     })
+    //  }
+
+      
+    </script>
+    
+</body>
+</html>

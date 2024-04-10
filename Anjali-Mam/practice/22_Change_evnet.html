@@ -21,15 +21,29 @@
         selectAllCheckbox.addEventListener("change",function(e){
 
             let allCheckbox = document.querySelectorAll(".checkbox");
-            // console.log(allCheckbox);
+            console.log(allCheckbox);
 
             allCheckbox.forEach(function(chk){
                 // console.log(chk);
-
                 chk.checked = selectAllCheckbox.checked;
             })
-
         })
+
+        // let selectAllCheckbox = document.querySelector("#checkAll");
+        // console.log(selectAllCheckbox);
+
+        // selectAllCheckbox.addEventListener("change",function(e){
+
+        //     let allCheckbox = document.querySelectorAll(".checkbox");
+        //     // console.log(allCheckbox);
+
+        //     allCheckbox.forEach(function(chk){
+        //         // console.log(chk);
+
+        //         chk.checked = selectAllCheckbox.checked;
+        //     })
+
+        //  })
     </script>
 </body>
 </html>

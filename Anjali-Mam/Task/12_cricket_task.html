@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cricket team</title>
+    <style>
+        body{
+            
+            background: url(../Task/bg-2img.jpg)no-repeat center center/cover ;
+            background-repeat: no-repeat;
+            position: relative;
+           
+            height: 100vh;
+            width: 90%;
+
+        }
+        div img {
+             /* width: 180px; 
+            height: 180px; */
+            /* border: 1px blue solid; */
+             margin-left: 20px;
+            border-radius: 200%;
+            z-index: 1; 
+           
+        }
+
+
+       
+        .iplimage{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+         div img{
+            height: 150px;
+            width: 120px;
+        }
+        .select {
+           
+            /* border: 2px solid red; */
+            position: absolute;
+            top: 50%;
+            left: 30%;
+           
+        }
+
+        #random {
+          
+            /* border: 2px solid red; */
+            position: absolute;
+            top: 50%;
+            left: 70%;
+           
+        } 
+        .vs {
+            left: 54%;
+            position: absolute;
+            top: 50%;
+           
+        }
+        h1{
+            font-size:80px;
+          margin-left: 2px;
+            /* color: white; */
+        }
+        .iplimage div img:hover{
+            cursor: pointer;
+           filter: grayscale(0);
+           transform: scale(1.1)  rotate(4deg);
+           
+
+        }
+        
+       
+        
+    </style>
+</head>
+
+<body>
+
+   <div class="iplimage">
+     <div id="i-1"><img src="../Task/gujrat-titans.png" alt="" class="first"></div>
+     <div id="i-2"><img src="../Task/Delhi-capital.jpg" alt="i-1" ></div>
+     <div id="i-3"><img src="../Task/channei-super.jpg" alt="i-1"></div>
+     <div id="i-4"><img src="../Task/lakhnau-img.jpg" alt="i-1"></div>
+     <div id="i-5"><img src="../Task/royal-chalenger.jpg" alt="i-1"></div>
+     <div id="i-6"><img src="../Task/punjab-kings.jpg" alt="i-1"></div>
+     <div id="i-7"><img src="../Task/mumbai-indians.png" alt="i-1"></div>
+     <div id="i-8"><img src="../Task/sunrice-1.jpg" alt="i-1"></div>
+    
+
+</div>
+<div class="select">
+    <img src="" alt="" class="se">
+
+</div>
+<h1 class="vs">V/S</h1>
+
+<div id="random">
+    <img src="" alt="" id="hidden">
+</div>
+    
+
+   
+
+    <script>
+
+
+           let array = [];
+
+           let select_team = document.querySelectorAll(".iplimage div img"); //image list get kiya
+        //    console.log(select_team);
+
+        select_team.forEach(function(st){
+            array.push(st.getAttribute("src"));
+            console.log(st);
+
+            st.addEventListener("click",function(){
+                // console.log(st);
+
+
+            let st = this.getAttribute("src");
+            // console.log(st);  
+            
+           let stimg = document.querySelector(".se")// selected image
+            stimg.setAttribute("src",st);
+
+         
+            let fillterteam = array.filter((select_team)=> select_team!==st);
+            console.log(fillterteam);
+
+            let random_team = Math.floor(Math.random()*fillterteam.length);
+            
+            let imageofrandom = array[random_team];
+            console.log(imageofrandom);
+
+
+            letteam_opp = document.getElementById("random");
+            random.setAttribute("src",imageofrandom);
+
+            let hidden = document.getElementById("hidden");
+            hidden.src = fillterteam[random_team]
+
+            })
+        })
+
+       
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
+<!-- allimg.forEach(function(img){
+    img.addEventListener("click",function(){
+
+    var mypath = this.getAttribute("src")
+    console.log(mypath);
+
+    var preview = document.querySelector(".maincountainer img");
+    console.log(preview);
+
+    preview.setAttribute("src",mypath);
+
+
+    }) -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="keyid" placeholder="Enter your key value">
+    <input type="text" id="valueid" placeholder="Enter your value ">
+
+    <button onclick="savedata()" >button</button>
+
+    <script>
+
+        let obj = [];
+
+        function savedata(){
+
+            let  k = document.getElementById("keyid");
+            let v = document.getElementById("valueid");
+
+            obj[k.value]  = v.value;
+            console.log(obj);
+
+
+
+            
+
+            // k.value  = ""
+            // v.value = ""
+
+            
+          let li = document.createElement("li");
+          console.log(li);
+         
+            li.innerText = obj[k.value];
+            document.body.append(li)
+            // let li = document.createElement("li");
+            // // li.innerText = input.value;
+            // document.body.append(li);
+            // li.innerHTML = input.value;
+          
+        }
+        
+
+    </script>
+</body>
+</html>
