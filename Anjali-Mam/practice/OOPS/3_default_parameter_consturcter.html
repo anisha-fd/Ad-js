@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class TimeShow
+
+        {
+
+            constructor(hour="00" ,min="00",sec="00")
+            {
+                this.hour = hour
+                this.min = min
+                this.sec = sec
+            }
+
+            display()
+            {
+                console.log(`Time Is : ${this.hour}:${this.min}:${this.sec}`);
+            }
+        }
+
+        var obj = new TimeShow(10,20,30);
+        obj.display()
+
+        var defaultobj = new TimeShow();
+        defaultobj.display()
+          
+
+        var defaultobj2 = new TimeShow(11)
+        defaultobj2.display()
+
+
+
+    </script>
+    
+</body>
+</html>

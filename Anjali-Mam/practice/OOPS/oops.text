@@ -1,0 +1,92 @@
+OOPS: Object oriented programing system or structure
+
+1 classs
+2 Object
+3 encapsulation
+4 abstraction
+5 polymorphism
+
+
+class  : class is a  userfind datatype,
+     class  which is contain data member and member function  in single entity.
+
+ e.g    whtsp  grop  (class)
+
+       member (data member)
+
+       messege, add, remove (memeber function)
+
+       admin (object)
+
+
+object : object is a instance or variable of class.
+           using of object we can access all properties of class.  
+
+
+
+           contstructer:consrtrucre  is  a spicial  function
+
+           {
+            {
+
+            }
+           }
+           consturctor with peramitters :
+
+           when constructor accept parameters its called constructor  with parametrer
+
+           => this keyword whis is respected couurent class property.
+
+
+           there are mainly 2 types of consrtrucre :
+
+           1) default consrtrucre :
+            
+                          default consrtrucre which is does not accept any parameters
+
+                          class student()
+                          {
+                            consrtrucre()
+                            {
+
+                            }
+                          }
+
+           2)parameterized consrtrucre :
+
+                          it accept some parameterized
+
+                          -> default parameterized consturctor 
+
+
+                          class student()
+                          {
+                            consturctor(parameters)
+                            {
+                                
+                            }
+                          }
+
+
+
+-----------------------------------------------------------------------------
+
+visibility modes :
+
+ there are 3 types of visibility
+
+ 1) public : it can access by anywhere
+ 2) private : only access by own class
+ 3) protected : it only access by own class and parent class
+
+
+ ---------------------------------------------------------
+
+ in js there are 2 types of private variable
+
+ 1)partial private = which is announce in ES6 and which is represent by _ in prefix
+
+ 2) truly private = which is announce in ES2021 and which is represent by # in prefix 
+
+
+
