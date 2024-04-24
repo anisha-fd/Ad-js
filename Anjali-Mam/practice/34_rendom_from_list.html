@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="game()">Check</button>
+
+    <script>
+        let mysubjectlist = ["c++","java","python","recat","flutter"];
+
+        function game(){
+            let index = Math.floor(Math.random() * mysubjectlist.length);
+            console.log(index);
+            console.log(mysubjectlist[index]);
+        }
+    </script>
+</body>
+</html>

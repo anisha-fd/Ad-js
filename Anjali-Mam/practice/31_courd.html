@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse 
+        }
+        tr,th,td{
+            border: 2px solid black;
+            margin-top: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form >
+
+        <input type="name" id="nameid" placeholder="Enter youe name">
+        <input type="subject" id="subjectid" placeholder="Enter youe subject">
+        <input type="city" id="cityid" placeholder="Enter youe city">
+        <input type="submit">
+    </form>
+
+    <h1 style="display: none;"> No recoud</h1>
+
+    <table>
+        <thead id="thead">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>subject</th>
+                <th>city</th>
+            </tr>
+
+        </thead>
+        <tbody id=" tbody"></tbody>
+    </table>
+
+
+    <script>
+
+
+           let form = document.querySelector("form");
+           
+           form.addEventListener("submit", function(e){
+            e.preventDefault();
+            console.log("submit button press");
+
+            let name = document.getElementById("nameid");
+            let subject = document.getElementById("subjectid");
+            let city = document.getElementById("cityid");
+
+            addRecords(name,subject,city)
+
+
+
+           })
+
+      
+
+      function addRecords(name,subject,city){
+           let new_js_object = {name : name.value , subject: subject.value , city : city.value};
+           console.log(new_js_object);  
+           
+           
+           let existing_data = JSON.parse(localStorage.getItem("students")) || [];
+
+           if(existing_data.length==0){
+
+            let new_js_object = { id: counterID,  name : name.value , subject: subject.value , city : city.value};
+           console.log(new_js_object); 
+           existing_data.push(new_js_object); 
+           
+
+           }
+           else{
+               let  
+
+
+           }
+           console.log("existing_data :", existing_data);
+
+           existing_data.push(new_js_object);
+           console.log("new update recoud :", existing_data);
+
+           localStorage.setItem("students",JSON.stringify(existing_data));
+           displayRecords()
+     }  
+
+
+     let tbody = document.getElementById("tbody");
+      function displayRecords(){
+        tbody.innerHTML = "";
+     
+
+        let allRecords = JSON.parse(localStorage.getItem("students")) || [];
+        console.log(allRecords.length);
+
+        if(allRecords.length == 0){
+            document.querySelector("h1").style.display = "block";
+
+        }
+        else{
+            document.querySelector("h1").style.display = "none";
+
+            // let tbody = document.getElementById("tbody");
+            // let tr = tbody.insertRow();
+            // console.log(tr);
+
+            for (let i=0; i<allRecords.length;i++){
+                let tr = tbody.insertRow();
+
+
+                let cell0 = tr.insertCell(0);
+                let cell1 = tr.insertCell(1);
+                let cell2 = tr.insertCell(2);
+                let cell3 = tr.insertCell(3);
+                let cell4 = tr.insertCell(4);
+                let cell5 = tr.insertCell(5);
+    
+
+
+    
+                  
+    
+    
+                cell0.textContent = allRecords[i].id;
+                cell1.textContent = allRecords[i].name;
+                cell2.textContent = allRecords[i].subject;
+                cell3.textContent = allRecords[i].city;
+                cell4.textContent = "<button>Edit</button>";
+                cell5.textContent = "<button>Delete</button>";
+            }
+
+
+
+
+             
+
+            
+        }
+
+     }
+     displayRecords();
+
+    </script>
+</body>
+</html>

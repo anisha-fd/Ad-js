@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <style>
+        table
+        {
+            margin: 20px;
+            border-collapse: collapse;
+        }
+        tr,th,td {
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="hidden" id="idvalue" />
+        <input type="text" id="nameid" placeholder="Enter name : "/>
+        <input type="text" id="subjectid" placeholder="Enter subject : "/>
+        <input type="text" id="cityid" placeholder="Enter city : "/>
+
+        <input type="submit" value="submit"/>
+    </form>
+
+    <h1 style="display: none;">No Records Found</h1>
+
+    <table>
+        <thead id="thead">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>SUBJECT</th>
+                <th>CITY</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script>
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            console.log("submit button press");
+
+
+            let name = document.getElementById("nameid");
+            let subject = document.getElementById("subjectid");
+            let city = document.getElementById("cityid");
+
+            
+            addRecords(name,subject,city);
+        })
+        let counterId = 1;
+        function addRecords(name,subject,city)
+        {
+           
+
+            // below command execute fetch all students data otherwise it will return blank array 
+            let existing_data = JSON.parse(localStorage.getItem("Students")) || [] ; 
+
+            if(existing_data.length==0)
+            {
+                // let js_object = {name : 'riya' , subject : 'mern'}; javascript 
+                let new_js_object = {id : counterId , name : name.value , subject : subject.value , city : city.value };
+                console.log(new_js_object);
+                existing_data.push(new_js_object);
+            }
+            else
+            {
+              
+                let lastRecords = existing_data.slice(-1)
+ 
+                console.log("last records : ",lastRecords);
+                let new_js_object = {id : lastRecords[0].id+1 , name : name.value , subject : subject.value , city : city.value };
+                console.log(new_js_object);
+                existing_data.push(new_js_object);
+            }
+            //console.log("existing data : ",existing_data);
+
+           
+
+            //console.log("new update records : ",existing_data);
+
+            //console.log("existing data : ",JSON.stringify(existing_data));
+
+            localStorage.setItem("Students",JSON.stringify(existing_data));
+
+            displayRecords();
+        }
+        let tbody = document.getElementById("tbody");
+        function displayRecords()
+        {
+            tbody.innerHTML = "";
+            let allRecords = JSON.parse(localStorage.getItem("Students")) || [];
+            console.log(allRecords.length);
+            if(allRecords.length == 0)
+            {
+                document.querySelector("h1").style.display = "block";
+            }
+            else
+            {
+                document.querySelector("h1").style.display = "none";
+               
+                for(let i=0;i<allRecords.length;i++)
+                {
+                    let tr = tbody.insertRow();
+                    //console.log(tr);
+
+                    let cell0 = tr.insertCell(0);
+                    let cell1 = tr.insertCell(1);
+                    let cell2 = tr.insertCell(2);
+                    let cell3 = tr.insertCell(3);
+                    let cell4 = tr.insertCell(4);
+                    let cell5 = tr.insertCell(5);
+
+                    cell0.textContent = allRecords[i].id;
+                    cell1.textContent = allRecords[i].name;
+                    cell2.textContent = allRecords[i].subject;
+                    cell3.textContent = allRecords[i].city;
+                    cell4.innerHTML = "<button id='btnedit' data-id="+allRecords[i].id+">Edit</button>";
+                    cell5.innerHTML = "<button id='btndel' data-id="+allRecords[i].id+">Delete</button>";
+                }
+            }
+
+
+            allDelButton = document.querySelectorAll("#btndel");
+            //console.log(allDelButton);
+
+            allDelButton.forEach(function(btn){
+                btn.addEventListener("click",function(e){
+                    //console.log(e);
+                  
+                    let id = e.target.getAttribute("data-id");
+                    console.log(id);
+
+                    let myRecords = JSON.parse(localStorage.getItem("Students"));
+            
+                    console.log(myRecords);
+
+                    myRecords = myRecords.filter(item => item.id != id);
+
+                    console.log(myRecords);
+                    localStorage.setItem("Students",JSON.stringify(myRecords))
+                    displayRecords();
+                })
+            })
+
+
+            allEditButton = document.querySelectorAll("#btnedit");
+            //console.log(allEditButton);
+
+            allEditButton.forEach(function(btn){
+                btn.addEventListener("click",function(e){
+                    let id = e.target.getAttribute("data-id");
+                    //console.log(id);
+
+                    let allRecord = JSON.parse(localStorage.getItem("Students"));
+                    console.log(allRecord);
+
+                    newArray = allRecord.filter(item => item.id == id);
+                    console.log("new Array ",newArray);
+
+                    console.log("name ",newArray[0].name);
+                    editRecord(newArray);
+                })
+            })
+        }
+
+        function editRecord(filterArray)
+        {
+            document.getElementById("idvalue").value = filterArray[0].id;
+            document.getElementById("nameid").value = filterArray[0].name;
+            document.getElementById("subjectid").value = filterArray[0].subject;
+            document.getElementById("cityid").value = filterArray[0].city;
+        }
+
+
+
+        displayRecords();
+    </script>
+</body>
+</html>
