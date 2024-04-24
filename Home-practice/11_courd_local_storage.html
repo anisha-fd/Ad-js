@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="text" id="nameid" placeholder="Enter Your Name">
+        <input type="text" id="subjectid" placeholder="Enter Your Subject">
+        <input type="text" id="cityid" placeholder="Enter Your City ">
+
+        <input type="submit" value="submit">
+
+    </form>
+
+    <script>
+
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            console.log("submit button press");
+
+
+            let name = document.getElementById("nameid");
+            let subject = document.getElementById("subjectid");
+            let city = document.getElementById("cityid");
+
+
+            allRecords(name,subject,city);
+
+        })
+
+        function allRecord(name,subject,city){
+
+            let existing_data = JSON.parse(localStorage.getItem("Students")) || [];
+
+
+            if(existing_data.length==0){
+                let new_js_object = {id : counterId, name: name.value, subject :subject.value, city:city.value};
+                console.log(new_js_object);
+                existing_data.push(new_js_object);
+            }
+            else{
+
+                let lastRecords = existing_data.slice(-1);
+                console.log("last Records :",lastRecords);
+                let new_js_object = {id :lastRecords[0].id+1, name: name.value, subject :subject.value, city:city.value};
+                console.log(new_js_object);
+                existing_data.push(new_js_object);
+            }
+
+            // console.log("existing_data :".existing_data);
+
+
+            localStorage.setItem("Students",JSON.stringify(existing_data));
+
+            displayRecords()
+        }
+
+
+         function  displayRecords(){
+
+        }
+    </script>
+    
+</body>
+</html>

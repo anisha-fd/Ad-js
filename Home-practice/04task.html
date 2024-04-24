@@ -25,32 +25,33 @@
     <h1>Have a nice Day </h1>
     <h1>Be Happy</h1>
     <h1>Belive your self </h1>
+    <h1>Okyy</h1>
 
     <script>
 
-        var myh1 = document.querySelectorAll("h1");
-
-        console.log(myh1); 
-
-        myh1.forEach(function(element,index){
-          var classListGrp = ["red","blue","green"];
-          console.log(classListGrp);
-
-          element.classList.add(classListGrp[index%classListGrp.length])
-          
-        })
         // var myh1 = document.querySelectorAll("h1");
-        // console.log(myh1);
 
-        // myh1.forEach(function(element,index) {
-        //     var  classListGrp = ["red","blue","green"];
-        //     console.log(classListGrp);
+        // console.log(myh1); 
 
-        //     element.classList.add(classListGrp[index%classListGrp.length]);
+        // myh1.forEach(function(element,index){
+        //   var classListGrp = ["red","blue","green"];
+        //   console.log(classListGrp);
 
+        //   element.classList.add(classListGrp[index%classListGrp.length])
+          
+        // })
+       
 
-        // });
+        var myh1 = document.querySelectorAll("h1");
+        console.log(myh1);
 
+        myh1.forEach(function(element,index) {
+            var classListGrp = ["red", "blue","green"];
+            console.log(classListGrp);
+
+            element.classList.add(classListGrp[index%classListGrp.length])
+
+        });
     </script>
     
 </body>

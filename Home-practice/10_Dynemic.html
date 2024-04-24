@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            height: 50px;
+            width: 20%;
+            margin: 20px;
+            background-color: cadetblue;
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="myh1" placeholder="Enter Your Name">
+    <input type="text " id="myh3" placeholder="Enter Your name">
+    <input type="text" id="myp" placeholder="Enter Your pera">
+
+    <script>
+
+        var input = document.getElementById("myh1");
+        input.addEventListener("click", function () {
+
+            var name = document.createElement("h1");
+            name.textContent = input.value;
+            console.log(name);
+
+            document.body.append(name)
+
+        })
+
+        var input1 = document.getElementById("myh3");
+        input1.addEventListener("click", function () {
+
+            var name1 = document.createElement("p");
+            name1.textContent = input1.value;
+            console.log(name1);
+
+            document.body.append(name1)
+
+        })
+
+        var input2 = document.getElementById("myp");
+        input2.addEventListener("click", function () {
+
+            var name2 = document.createElement("h3");
+            name2.textContent = input2.value;
+            console.log(name2);
+
+            document.body.append(name2)
+
+        })
+
+
+    </script>
+
+    <!-- allli.forEach(function(li){
+    li.addEventListener("click",function(){
+    console.log(li);
+    console.log(this.textContent);
+
+    var h1 = document.getElementById("myfruit");
+    h1.textContent = this.textContent;
+    }) -->
+
+
+
+</body>
+
+</html>

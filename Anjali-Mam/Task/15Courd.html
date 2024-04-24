@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr,th,td{
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <input type="text" id="nameid" placeholder="enter value : ">
+    <input type="text" id="subjectid" placeholder="enter value : ">
+    <input type="text" id="cityid" placeholder="enter value : ">
+    <input type="submit" value="submit">
+    </form>
+
+    <h1 style="display: none;">No Record found</h1>
+    <table>
+        <thead id="thead">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            console.log("submit button press");
+
+            let name = document.getElementById("nameid");
+            let subject = document.getElementById("subjectid");
+            let city = document.getElementById("cityid");
+
+            addRecords(name,subject,city);
+        })
+
+        
+
+        function addRecords(name,subject,city){
+            let new_js_object = {name : name.value , subject : subject.value, city : city.value};
+            console.log(new_js_object);
+
+            let existing_data = JSON.parse(localStorage.getItem("students")) || [];
+            console.log("existing_data : ",existing_data);
+            
+            existing_data.push(new_js_object);
+            console.log("new updated records :" ,existing_data );
+
+            localStorage.setItem("students",JSON.stringify(existing_data));
+
+            displaydata();
+        }
+
+        let tbody = document.getElementById("tbody");
+        function displaydata(){
+            tbody.innerHTML = "";
+
+            let allRecords = JSON.parse(localStorage.getItem("students")) || [];
+            console.log(allRecords.length);
+
+            if(allRecords.length == 0){
+                document.querySelector("h1").style.display = "block";
+            }
+            else{
+                document.querySelector("h1").style.display = "none";
+
+                for (let i=0;i<allRecords.length;i++){
+                    let tr = tbody.insertRow();
+
+                    let cell0 = tr.insertCell(0);
+                    let cell1 = tr.insertCell(1);
+                    let cell2 = tr.insertCell(2);
+                    let cell3 = tr.insertCell(3);
+                
+                    cell0.textContent = i+1;
+                    cell1.textContent = allRecords[i].name;
+                    cell2.textContent = allRecords[i].subject;
+                    cell3.textContent = allRecords[i].city;
+
+                }
+            }
+        }
+
+        displaydata();
+    </script>
+
+</body>
+</html>
